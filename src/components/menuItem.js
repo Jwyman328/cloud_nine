@@ -1,11 +1,16 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom'
 
 function MenuItem(props) {
-    return (
-        <div className='link-list-container-item'>
+
+    const routeTo = (routeLocation) => {
+        props.history.push(routeLocation)
+    }
+     return (
+        <div onClick={() => routeTo(props.route) } className='link-list-container-item'>
               {props.title}
           </div>
     );
 }
 
-export default MenuItem;
+export default withRouter(MenuItem);

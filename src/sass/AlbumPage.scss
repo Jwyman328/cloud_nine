@@ -1,0 +1,97 @@
+$main-pink: #e206a4;
+$light-pink: #cd4e81;
+$main-purple: #68427f;
+$light-blue: #999fcf;
+
+.AlbumPage {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom right,
+    $main-pink,
+    $light-pink,
+    $light-blue,
+    $main-purple
+  );
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.newsFeed {
+  width: 70vw;
+  height: auto;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*   border-left-width: 20px;
+  border-left-style: solid;
+  border-right-width: 20px;
+  border-right-style: solid;
+  border-color: rgba(255, 255, 255, 0.317);;
+ */
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50px;
+
+    width: 100%;
+    height: 250px;
+    
+    border-radius: 50px;
+    z-index: 0;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    margin-top: 3vh;
+    
+
+    &-image {
+      width: 50%;
+      height: 100%;
+      border-radius: 50px;
+      z-index: 1;
+    }
+
+    &-content {
+      width: 50%;
+      height: 100%;
+      border-radius: 50px;
+      //background-color: blue;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-text {
+        width: 70%;
+        height: auto;
+        //background-color: yellow;
+        font-size: x-large;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.ComingSoonImage {
+  width: 50vw;
+  height: 50vh;
+  //object-fit: cover;
+  position: absolute;
+  opacity: 0.8;
+  margin: 0 auto;
+}
