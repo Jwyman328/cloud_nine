@@ -9,8 +9,11 @@ import youtubeLogo from "../images/logo-youtube.svg";
 import spotifyLogo from "../images/logo-spotify.svg";
 
 function Footer(props) {
+ /*  const testMock = () => {
+    console.log('test 1')
+  } */
   return (
-    <div className="footer">
+    <div  className="footer">
       <div className="footer-social-media">
         <FooterItem
           logo={youtubeLogo}

@@ -31,7 +31,7 @@ function TourChart(props) {
     <div className="tour-chart">
 {/*         <TourItem date='the date' location = 'MA' venue=',y house' />
  */}    
-    {showItems.length > 0?createTourChart() : <div> No Shows Scheduled </div> }
+    {showItems.length > 0?createTourChart() : <div className='noShows'>No Shows Scheduled </div> }
  </div>
   );
 }
