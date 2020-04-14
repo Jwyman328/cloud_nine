@@ -8,7 +8,6 @@ import {
   withRouter,
 } from "react-router-dom";
 
-import MusicPage from "./pages/MusicPage";
 import HomePage from "./pages/HomePage";
 import NewsPage from './pages/NewsPage'
 import ShowsPage from './pages/ShowsPage'
@@ -20,12 +19,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage />
-          </Route>
-        </Switch>
-
-        <Switch>
-          <Route exact path="/Music">
-            <MusicPage />
           </Route>
         </Switch>
         <Switch>

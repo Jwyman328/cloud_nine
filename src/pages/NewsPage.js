@@ -18,20 +18,11 @@ import PageTitle from "../components/PageTitle";
 import NewsFeed from '../components/NewsFeed';
 
 function NewsPage(props) {
-  //const newsItems = useFetchAndSetAPIData(latestNewsAPILink);
   return (
     <div className="AlbumPage">
       <PageTitle titleText="News" />
-
       <img className="menuIcon" src={MenuIcon} />
-
-     {/*  {isAPIDataLoaded(newsItems) ? (
-        <div className="newsFeed">{createNewsFeedItems(newsItems)}</div>
-      ) : (
-        <div> Loading Latest News, Please Wait... </div>
-      )} */}
       <NewsFeed />
-
       <Footer />
     </div>
   );
