@@ -13,6 +13,7 @@ import MenuIcon from '../images/menu-outline.svg'
 
 function NewsPage(props) {
   const [newsItems, setNewsItems] = useState([])
+  
   const fetchItems =  async() => {
       const data = await fetch('https://cloudninebackend2.herokuapp.com/latest_news_items/')
       const dataJson = await data.json()
