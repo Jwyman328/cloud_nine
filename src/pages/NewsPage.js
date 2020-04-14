@@ -10,11 +10,12 @@ import Footer from '../components/Footer'
 
 import NewsFeedItem from '../components/newsFeedItem'
 import MenuIcon from '../images/menu-outline.svg'
+import useFetchAndSetAPIData from '../customhooks/useFetchAndSetAPIData'
 
 function NewsPage(props) {
-  const [newsItems, setNewsItems] = useState([])
-  
-  const fetchItems =  async() => {
+  //const [newsItems, setNewsItems] = useState([])
+
+/*   const fetchItems =  async() => {
       const data = await fetch('https://cloudninebackend2.herokuapp.com/latest_news_items/')
       const dataJson = await data.json()
       setNewsItems(dataJson)
@@ -23,8 +24,8 @@ function NewsPage(props) {
 
     useEffect(() => {
         fetchItems()
-    }, [])
-
+    }, []) */
+  const newsItems = useFetchAndSetAPIData('https://cloudninebackend2.herokuapp.com/latest_news_items/')
   return (
     <div className="AlbumPage">
      <div className='pageTitle'>

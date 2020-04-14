@@ -6,7 +6,7 @@ import MenuItem from "../components/menuItem";
 import BandBackGroundVideo from "../components/BandBackGroundVideo";
 import Footer from "../components/Footer";
 import MainLogoHeader from "../components/MainLogoHeader";
-import spotifyLink from "../ataglinks/spotifyLink";
+import spotifyLink from "../links/spotifyLink";
 
 function HomePage() {
   return (
