@@ -25,18 +25,6 @@ function NewsPage(props) {
 
       {isAPIDataLoaded(newsItems) ? (
         <div className="newsFeed">
-         {/*  <NewsFeedItem
-            text={newsItems[0].text_content}
-            image={newsItems[0].photo_url}
-          />
-          <NewsFeedItem
-            text={newsItems[1].text_content}
-            image={newsItems[1].photo_url}
-          />
-          <NewsFeedItem
-            text={newsItems[2].text_content}
-            image={newsItems[2].photo_url}
-          /> */}
           {createNewsFeedItems(newsItems)}
         </div>
       ) : (
