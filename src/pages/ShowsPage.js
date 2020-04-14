@@ -4,10 +4,12 @@ import "../sass/ShowsPage.scss";
 
 import Footer from "../components/Footer";
 import TourChart from "../components/TourChart";
+import PageTitle from '../components/PageTitle'
+
 function ShowsPage(props) {
   return (
     <div className="AlbumPage">
-      <div className="pageTitle">Shows</div>
+      <PageTitle titleText='Shows' />
       <TourChart />
       <Footer />
     </div>

@@ -6,30 +6,31 @@ import { withRouter } from "react-router-dom";
 import "../sass/AlbumPage.scss";
 import "../App.scss";
 
-import createNewsFeedItems from '../helperfunctions/createNewsFeedItems'
+import createNewsFeedItems from "../helperfunctions/createNewsFeedItems";
 import Footer from "../components/Footer";
 
 import NewsFeedItem from "../components/newsFeedItem";
 import MenuIcon from "../images/menu-outline.svg";
 import useFetchAndSetAPIData from "../customhooks/useFetchAndSetAPIData";
 import isAPIDataLoaded from "../helperfunctions/isAPIDataLoaded";
+import latestNewsAPILink from "../links/latestNewsAPILink";
+import PageTitle from "../components/PageTitle";
+import NewsFeed from '../components/NewsFeed';
+
 function NewsPage(props) {
-  const newsItems = useFetchAndSetAPIData(
-    "https://cloudninebackend2.herokuapp.com/latest_news_items/"
-  );
+  //const newsItems = useFetchAndSetAPIData(latestNewsAPILink);
   return (
     <div className="AlbumPage">
-      <div className="pageTitle">News</div>
+      <PageTitle titleText="News" />
 
       <img className="menuIcon" src={MenuIcon} />
 
-      {isAPIDataLoaded(newsItems) ? (
-        <div className="newsFeed">
-          {createNewsFeedItems(newsItems)}
-        </div>
+     {/*  {isAPIDataLoaded(newsItems) ? (
+        <div className="newsFeed">{createNewsFeedItems(newsItems)}</div>
       ) : (
         <div> Loading Latest News, Please Wait... </div>
-      )}
+      )} */}
+      <NewsFeed />
 
       <Footer />
     </div>
