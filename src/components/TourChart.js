@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import TourItem from './TourItem'
-import makeTimeDataReadable from '../helperfunctions/makeTimeDataReadable'
+import makeTimeDataReadable from '../helperfunctions/makeTimeDataReadable';
+import createTourChart from '../helperfunctions/createTourChart';
+import isAPIDataLoaded from "../helperfunctions/isAPIDataLoaded";
 
 function TourChart(props) {
     const [showItems, setShowItems] = useState([])
@@ -14,25 +16,19 @@ function TourChart(props) {
       useEffect(() => {
         fetchShows()
     }, [])
-/*     const splitTime = (fullTime) => {
-        let [dateTime1,hourTimeZ] = fullTime.split('T')
-        let [hourTime,z] = hourTimeZ.split('Z')
-        let[year,month,day] = dateTime1.split('-')
-        let dateTime = `${month}-${day}-${year}`
-        return ([hourTime, dateTime])
-    } */
-    const createTourChart = () => {
+
+/*     const createTourChart = () => {
         const allTourItems = showItems.map((showItem) => {
             const [hourTime, dateTime] = makeTimeDataReadable(showItem.date)
             return  <TourItem date={dateTime} time={hourTime} location = {showItem.location} venue={showItem.venue} />
         })
         return allTourItems
-    }
+    } */
   return (
     <div className="tour-chart">
 {/*         <TourItem date='the date' location = 'MA' venue=',y house' />
  */}    
-    {showItems.length > 0?createTourChart() : <div className='noShows'>No Shows Scheduled </div> }
+    {isAPIDataLoaded(showItems)? createTourChart(showItems) : <div className='noShows'>No Shows Scheduled </div> }
  </div>
   );
 }
