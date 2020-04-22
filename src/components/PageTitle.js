@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import menuModalState from '../context/menuModalState'
 
 function PageTitle({titleText}){
+
     return (
-        <div className="pageTitle">{titleText}</div>
+        <div className="pageTitle">{titleText}</div> 
     )
 }
 

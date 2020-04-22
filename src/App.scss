@@ -12,6 +12,7 @@ $light-blue:#999FCF;
 
 }
 
+
 .video-background-container {
   display: flex;
   flex-direction: column;
@@ -46,6 +47,7 @@ $light-blue:#999FCF;
   align-items: center;
   width: 100vw;
   height: 80vh;
+  z-index: 100;
 
   &-item {
     font-size: xx-large;
@@ -54,11 +56,13 @@ $light-blue:#999FCF;
     font-weight: 800;
     font-style: italic;
     transition: all .2s;
+    cursor: pointer;
+
 
     
     &:hover {
-      opacity: .3;
-      color: white;
+      //opacity: .8;
+      color: rgba(255, 255, 255, 0.55);
     }
   }
 }
@@ -176,6 +180,13 @@ $light-blue:#999FCF;
   position: fixed;
   top: 10px;
   right: 3vw;
-  z-index: 10;
+  z-index: 1000;
+  cursor: pointer;
   
+}
+
+.hideItem {
+  width: 0;
+  opacity: 0;
+  z-index: -1;
 }

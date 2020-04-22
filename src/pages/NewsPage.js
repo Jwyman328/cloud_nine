@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, Fragment } from "react";
 import comingSoon from "../images/AlbumComingSoon.png";
 import SheWalksBy from "../images/SheWalksBy.png";
 import groupPhoto from "../images/groupPhoto.png";
@@ -15,15 +15,24 @@ import useFetchAndSetAPIData from "../customhooks/useFetchAndSetAPIData";
 import isAPIDataLoaded from "../helperfunctions/isAPIDataLoaded";
 import latestNewsAPILink from "../links/latestNewsAPILink";
 import PageTitle from "../components/PageTitle";
-import NewsFeed from '../components/NewsFeed';
+import NewsFeed from "../components/NewsFeed";
+import MenuModal from "../components/MenuModal/menuModal";
+import menuModalState from "../context/menuModalState";
 
 function NewsPage(props) {
+  const menuModalValue = useContext(menuModalState);
+  const { menuModalisOpen} = menuModalValue;
+
   return (
-    <div className="AlbumPage">
-      <PageTitle titleText="News" />
-      <img className="menuIcon" src={MenuIcon} />
-      <NewsFeed />
-      <Footer />
+    <div className={"AlbumPage"}>
+      <MenuModal />
+      {menuModalisOpen ? null : (
+        <Fragment>
+          <PageTitle titleText="News" />
+          <NewsFeed />
+          <Footer />
+        </Fragment>
+      )}
     </div>
   );
 }

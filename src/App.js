@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import {
   BrowserRouter as Router,
@@ -12,8 +12,20 @@ import HomePage from "./pages/HomePage";
 import NewsPage from './pages/NewsPage'
 import ShowsPage from './pages/ShowsPage'
 
+import MenuModalState from './context/menuModalState';
+import './components/MenuModal/menuModal.scss'
 function App() {
+  const [menuModalisOpen, setMenuModalIsOpen] = useState(false);
+
+  const handleClick = () => {
+    console.log(menuModalisOpen)
+    const clickValue = !menuModalisOpen;
+    setMenuModalIsOpen(clickValue);
+  };
+
+
   return (
+    <MenuModalState.Provider value={{menuModalisOpen, setMenuModalIsOpen, handleClick}}>
     <div className="App2">
       <Router>
         <Switch>
@@ -34,6 +46,7 @@ function App() {
         </Switch>
       </Router>
     </div>
+    </MenuModalState.Provider>
   );
 }
 

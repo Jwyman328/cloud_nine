@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import "../App.scss";
 
 import FooterItem from '../components/footerItem'
@@ -7,13 +7,11 @@ import MainLogo from "../images/cloudNineLogo.png";
 import fbLogo from "../images/logo-facebook.svg";
 import youtubeLogo from "../images/logo-youtube.svg";
 import spotifyLogo from "../images/logo-spotify.svg";
+import menuModalState from "../context/menuModalState";
 
 function Footer(props) {
- /*  const testMock = () => {
-    console.log('test 1')
-  } */
   return (
-    <div  className="footer">
+    <div  className={"footer"}>
       <div className="footer-social-media">
         <FooterItem
           logo={youtubeLogo}
