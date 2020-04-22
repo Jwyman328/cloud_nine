@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,Fragment } from "react";
 import useFetchAndSetAPIData from "../customhooks/useFetchAndSetAPIData";
 import isAPIDataLoaded from "../helperfunctions/isAPIDataLoaded";
 import createNewsFeedItems from "../helperfunctions/createNewsFeedItems";
@@ -11,13 +11,13 @@ function NewsFeed() {
   const newsItems = useFetchAndSetAPIData(latestNewsAPILink);
 
   return (
-    <div  >
+    <Fragment>
       {isAPIDataLoaded(newsItems) ? (
-        <div >{createNewsFeedItems(newsItems)}</div>
+        <Fragment>{createNewsFeedItems(newsItems)}</Fragment>
       ) : (
         <div> Loading Latest News, Please Wait... </div>
       )}
-    </div>
+    </Fragment>
   );
 }
 

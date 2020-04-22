@@ -1,27 +1,41 @@
 .tour-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70vw;
+  min-height: 70vh;
+  height: auto;
+  border-top: black;
+  border-top-style: solid;
+  border-top-width: 1px;
+
+  &-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    width: 70vw;
-    min-height: 70vh;
-    height: auto;
-    border-top: black;
-    border-top-style: solid;
-    border-top-width: 1px;
+    justify-content: space-evenly;
 
+    width: 100%;
+    height: 10vh;
 
-    &-item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+    border-bottom: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+}
 
-        width: 100%;
-        height:10vh;
+@media (max-width: 500px) {
+  .tour-chart {
+      width: 90vw;
+      height: auto;
+  
+  &-item {
+    height: 20vh;
 
-        border-bottom: black;
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
+    &-element{
+        margin: 5px;
     }
+  } 
+}
 }
