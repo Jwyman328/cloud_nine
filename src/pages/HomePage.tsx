@@ -1,34 +1,40 @@
-import React, {useRef, useEffect, useState} from "react";
+import React, { useRef, useEffect, useState } from "react";
 import logo from "../logo.svg";
 import "../App.scss";
-import backgroundVideo from "../videos/cloud9Cut.mp4";
+//import backgroundVideo from "../videos/cloud9Cut.mp4";
 import MenuItem from "../components/menuItem";
 import BandBackGroundVideo from "../components/BandBackGroundVideo";
 import Footer from "../components/Footer";
 import MainLogoHeader from "../components/MainLogoHeader";
 import spotifyLink from "../links/spotifyLink";
-import groupPhoto from '../images/groupPhoto.png'
+import groupPhoto from "../images/groupPhoto.png";
+
+type VideoState = [boolean, Function];
+type containerElement = HTMLDivElement | null;
 
 function HomePage() {
-  const [showVideo, setShowVideo] = useState(true)
+  const [showVideo, setShowVideo]: VideoState = useState(true);
 
-  const handleRef = (el) => {
-    if (el){
-      const width = el.getBoundingClientRect().width
-      if (width > 530){
-        setShowVideo(true)
-      }else{
-        setShowVideo(false)
+  const handleRef = (el: containerElement) => {
+    if (el) {
+      const width: number = el.getBoundingClientRect().width;
+      if (width > 530) {
+        setShowVideo(true);
+      } else {
+        setShowVideo(false);
       }
-    } else{
-      setShowVideo(false)
+    } else {
+      setShowVideo(false);
     }
-   
-  }
+  };
   return (
     <div ref={(el) => handleRef(el)} className="video-background-container">
       <MainLogoHeader />
-      {showVideo?<BandBackGroundVideo />: <div className='mobileBackground'> </div> } 
+      {showVideo ? (
+        <BandBackGroundVideo />
+      ) : (
+        <div className="mobileBackground"> </div>
+      )}
 
       <div className="link-list-container">
         <MenuItem title="Home" route="/" />

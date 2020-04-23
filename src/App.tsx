@@ -14,11 +14,14 @@ import ShowsPage from './pages/ShowsPage'
 
 import MenuModalState from './context/menuModalState';
 import './components/MenuModal/menuModal.scss'
-function App() {
-  const [menuModalisOpen, setMenuModalIsOpen] = useState(false);
 
-  const handleClick = () => {
-    console.log(menuModalisOpen)
+type MenuModal = [boolean, Function]
+
+
+function App() {
+  const [menuModalisOpen, setMenuModalIsOpen]:MenuModal = useState(false);
+
+  const handleClick = ():void => {
     const clickValue = !menuModalisOpen;
     setMenuModalIsOpen(clickValue);
   };

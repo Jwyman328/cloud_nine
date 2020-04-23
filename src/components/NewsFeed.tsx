@@ -1,14 +1,17 @@
-import React, { useContext,Fragment } from "react";
+import React, { useContext, Fragment } from "react";
 import useFetchAndSetAPIData from "../customhooks/useFetchAndSetAPIData";
 import isAPIDataLoaded from "../helperfunctions/isAPIDataLoaded";
 import createNewsFeedItems from "../helperfunctions/createNewsFeedItems";
 import latestNewsAPILink from "../links/latestNewsAPILink";
 
 import menuModalState from "../context/menuModalState";
-import './MenuModal/menuModal.scss'
-function NewsFeed() {
+import "./MenuModal/menuModal.scss";
 
-  const newsItems = useFetchAndSetAPIData(latestNewsAPILink);
+type NewsItem =
+[] | object[];
+
+function NewsFeed() {
+  const newsItems:NewsItem  = useFetchAndSetAPIData(latestNewsAPILink);
 
   return (
     <Fragment>

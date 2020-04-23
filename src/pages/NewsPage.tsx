@@ -17,10 +17,11 @@ import latestNewsAPILink from "../links/latestNewsAPILink";
 import PageTitle from "../components/PageTitle";
 import NewsFeed from "../components/NewsFeed";
 import MenuModal from "../components/MenuModal/menuModal";
-import menuModalState from "../context/menuModalState";
+import MenuModalState from "../context/menuModalState";
 
-function NewsPage(props) {
-  const menuModalValue = useContext(menuModalState);
+
+function NewsPage() {
+  const menuModalValue = useContext(MenuModalState);
   const { menuModalisOpen} = menuModalValue;
 
   return (

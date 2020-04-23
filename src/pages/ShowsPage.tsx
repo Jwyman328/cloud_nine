@@ -9,9 +9,9 @@ import MenuModal from "../components/MenuModal/menuModal";
 
 import MenuModalState from "../context/menuModalState";
 
-function ShowsPage(props) {
+function ShowsPage() {
   const menuModalValue = useContext(MenuModalState);
-  const { menuModalisOpen } = menuModalValue;
+  const { menuModalisOpen} : any = menuModalValue;
 
   return (
     <div className="AlbumPage">

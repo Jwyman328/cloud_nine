@@ -1,7 +1,11 @@
 import React, {useContext} from 'react'
 import menuModalState from '../context/menuModalState'
 
-function PageTitle({titleText}){
+type PageTitleText = {
+    titleText:string
+}
+
+function PageTitle({titleText}:PageTitleText){
 
     return (
         <div className="pageTitle">{titleText}</div> 

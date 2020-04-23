@@ -10,7 +10,7 @@ import exitIcon from '../../images/exit.svg'
 
 function MenuModal(props) {
   const menuModalValue = useContext(MenuModalState);
-  const { menuModalisOpen, handleClick } = menuModalValue;
+  const { menuModalisOpen, handleClick }  = menuModalValue;
   const menuIconBasedOnIsOpen = menuModalisOpen? exitIcon : MenuIcon
 
   return (

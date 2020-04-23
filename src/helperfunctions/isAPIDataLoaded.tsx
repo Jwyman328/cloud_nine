@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-
+type ApiData = object[] | []
 const isAPIDataLoaded = (apiData) => {
     if (apiData.length > 0){
         return true
