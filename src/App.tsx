@@ -15,11 +15,10 @@ import ShowsPage from './pages/ShowsPage'
 import MenuModalState from './context/menuModalState';
 import './components/MenuModal/menuModal.scss'
 
-type MenuModal = [boolean, Function]
 
 
 function App() {
-  const [menuModalisOpen, setMenuModalIsOpen]:MenuModal = useState(false);
+  const [menuModalisOpen, setMenuModalIsOpen]= useState<boolean>(false);
 
   const handleClick = ():void => {
     const clickValue = !menuModalisOpen;

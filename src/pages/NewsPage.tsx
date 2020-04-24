@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, Fragment } from "react";
+import React, { useEffect, useContext, Fragment } from "react";
 import comingSoon from "../images/AlbumComingSoon.png";
 import SheWalksBy from "../images/SheWalksBy.png";
 import groupPhoto from "../images/groupPhoto.png";
@@ -6,12 +6,10 @@ import { withRouter } from "react-router-dom";
 import "../sass/AlbumPage.scss";
 import "../App.scss";
 
-import createNewsFeedItems from "../helperfunctions/createNewsFeedItems";
 import Footer from "../components/Footer";
 
 import NewsFeedItem from "../components/newsFeedItem";
 import MenuIcon from "../images/menu-outline.svg";
-import useFetchAndSetAPIData from "../customhooks/useFetchAndSetAPIData";
 import isAPIDataLoaded from "../helperfunctions/isAPIDataLoaded";
 import latestNewsAPILink from "../links/latestNewsAPILink";
 import PageTitle from "../components/PageTitle";
@@ -19,9 +17,14 @@ import NewsFeed from "../components/NewsFeed";
 import MenuModal from "../components/MenuModal/menuModal";
 import MenuModalState from "../context/menuModalState";
 
+type AppContextInterFace  = {
+  menuModalisOpen:boolean | null;
+  setMenuModalIsOpen:Function | null;
+  handleClick:Function| null;
+} 
 
 function NewsPage() {
-  const menuModalValue = useContext(MenuModalState);
+  const menuModalValue = useContext<AppContextInterFace>(MenuModalState);
   const { menuModalisOpen} = menuModalValue;
 
   return (

@@ -7,11 +7,13 @@ import latestNewsAPILink from "../links/latestNewsAPILink";
 import menuModalState from "../context/menuModalState";
 import "./MenuModal/menuModal.scss";
 
+type NewsApiData = {text_content:string, photo_url: string}[]
+
 type NewsItem =
-[] | object[];
+[] | NewsApiData;
 
 function NewsFeed() {
-  const newsItems:NewsItem  = useFetchAndSetAPIData(latestNewsAPILink);
+  const newsItems:NewsItem  = useFetchAndSetAPIData<NewsItem>(latestNewsAPILink);
 
   return (
     <Fragment>

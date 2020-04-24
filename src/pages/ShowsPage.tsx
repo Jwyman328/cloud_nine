@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, Fragment } from "react";
+import React, { useEffect, useContext, Fragment } from "react";
 import "../sass/AlbumPage.scss";
 import "../sass/ShowsPage.scss";
 

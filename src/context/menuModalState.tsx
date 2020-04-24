@@ -1,10 +1,10 @@
 import React from 'react';
 
 type AppContextInterFace  = {
-    menuModalisOpen:boolean;
-    setMenuModalIsOpen:Function;
-    handleClick:Function;
+    menuModalisOpen:boolean | null;
+    setMenuModalIsOpen:Function | null;
+    handleClick:Function | null;
 }
-const MenuModalState = React.createContext<any>(null);
+const MenuModalState = React.createContext<AppContextInterFace>({menuModalisOpen:null, setMenuModalIsOpen:null, handleClick:null});
 
 export default MenuModalState;

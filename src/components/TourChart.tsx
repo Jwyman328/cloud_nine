@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import makeTimeDataReadable from "../helperfunctions/makeTimeDataReadable";
 import createTourChart from "../helperfunctions/createTourChart";
 import isAPIDataLoaded from "../helperfunctions/isAPIDataLoaded";
 import useFetchAndSetAPIData from "../customhooks/useFetchAndSetAPIData";
 
 type ShowItems = { date: string; location: string; venue: string }[] | [];
+
 function TourChart() {
-  const showItems: ShowItems = useFetchAndSetAPIData(
+  const showItems: ShowItems = useFetchAndSetAPIData<ShowItems>(
     "https://cloudninebackend2.herokuapp.com/current_tour_shows/"
   );
   return (

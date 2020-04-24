@@ -9,11 +9,11 @@ import MainLogoHeader from "../components/MainLogoHeader";
 import spotifyLink from "../links/spotifyLink";
 import groupPhoto from "../images/groupPhoto.png";
 
-type VideoState = [boolean, Function];
+
 type containerElement = HTMLDivElement | null;
 
 function HomePage() {
-  const [showVideo, setShowVideo]: VideoState = useState(true);
+  const [showVideo, setShowVideo] = useState<boolean>(true);
 
   const handleRef = (el: containerElement) => {
     if (el) {
