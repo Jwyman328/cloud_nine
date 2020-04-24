@@ -19,8 +19,8 @@ import MenuModalState from "../context/menuModalState";
 
 type AppContextInterFace  = {
   menuModalisOpen:boolean | null;
-  setMenuModalIsOpen:Function | null;
-  handleClick:Function| null;
+  setMenuModalIsOpen:Function ;
+  handleClick:Function;
 } 
 
 function NewsPage() {
