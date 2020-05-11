@@ -8,7 +8,7 @@ import MenuModalState from "../../context/menuModalState";
 import MenuIcon from "../../images/menu-outline.svg";
 import exitIcon from '../../images/exit.svg'
 
-function MenuModal(props) {
+function MenuModal() {
   const menuModalValue = useContext(MenuModalState);
   const { menuModalisOpen, handleClick }  = menuModalValue;
   const menuIconBasedOnIsOpen = menuModalisOpen? exitIcon : MenuIcon
