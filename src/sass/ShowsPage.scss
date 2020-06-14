@@ -10,7 +10,7 @@
   border-top-style: solid;
   border-top-width: 1px;
 
-  &-item {
+  &__event{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,12 +30,11 @@
       width: 90vw;
       height: auto;
   
-  &-item {
+  &__event {
     height: 20vh;
-
-    &-element{
-        margin: 5px;
-    }
   } 
+  &__data{
+    margin: 5px;
+}
 }
 }

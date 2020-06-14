@@ -14,30 +14,30 @@ describe('Test HomePage rendering works', () => {
     })
 
     it('Home menu link stays at homepage after click',() => {
-        const homeMenuItem = wrapper.find('.link-list-container-item').at(0);
+        const homeMenuItem = wrapper.find('.link-list__item').at(0);
         homeMenuItem.simulate('click')
 
-        const homeMenuItemStillHere = wrapper.find('.link-list-container-item').at(0);
+        const homeMenuItemStillHere = wrapper.find('.link-list__item').at(0);
         expect(homeMenuItemStillHere.text()).toBe('Home')
     })
 
     it('Music menu link stays at homepage after click',() => {
-        const musicMenuItem = wrapper.find('.link-list-container-item').at(1);
+        const musicMenuItem = wrapper.find('.link-list__item').at(1);
         musicMenuItem.simulate('click')
 
-        const musicMenuItemStillHere = wrapper.find('.link-list-container-item').at(1);
+        const musicMenuItemStillHere = wrapper.find('.link-list__item').at(1);
         expect(musicMenuItemStillHere.text()).toBe('Music')
     })
 
 
      it('Show menu link navigates to showpage after click',() => {
-        const showMenuItem = wrapper.find('.link-list-container-item').at(2);
+        const showMenuItem = wrapper.find('.link-list__item').at(2);
         console.log(showMenuItem.props().onClick)
         showMenuItem.simulate('click')
 
         wrapper.update()
-        const showPageTitleText = wrapper.find('.pageTitle').text();
-        expect(showPageTitleText).toBe('Shows')
+        const showpage__titleText = wrapper.find('.page__title').text();
+        expect(showpage__titleText).toBe('Shows')
     })
 })
 

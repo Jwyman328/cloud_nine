@@ -16,12 +16,12 @@ function MenuModal() {
   return (
     <Fragment>
       <div onClick={() => handleClick()}>
-        <img className="menuIcon" src={menuIconBasedOnIsOpen} />
+        <img className="menu__icon" src={menuIconBasedOnIsOpen} />
       </div>
       {menuModalisOpen ? (
-        <div className="link-list-container --menu-modal">
+        <div className="link-list --menu-modal">
           <MenuItem title="Home" route="/" />
-          <a className="menu_item_link" href={spotifyLink} target="_blank">
+          <a className="link-list__item link-list__item--menu" href={spotifyLink} target="_blank">
             <MenuItem title="Music" />
           </a>
 

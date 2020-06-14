@@ -8,7 +8,7 @@ type PageTitleText = {
 function PageTitle({titleText}:PageTitleText){
 
     return (
-        <div className="pageTitle">{titleText}</div> 
+        <div className="page__title">{titleText}</div> 
     )
 }
 

@@ -14,7 +14,7 @@ function MenuItem(props:MenuProps) {
         routeTo(props.route, props) 
     }
      return (
-        <div onClick={() => handleMenuItemClick() } className='link-list-container-item'>
+        <div onClick={() => handleMenuItemClick() } className='link-list__item'>
               {title}
           </div>
     );

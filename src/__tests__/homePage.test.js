@@ -33,14 +33,14 @@ describe('Test HomePage rendering routeTo function was clicked', () => {
 
     it('Home menu link routeTo reports a click',() => {
 
-        const homeMenuItem = wrapper.find('.link-list-container-item').at(0);
+        const homeMenuItem = wrapper.find('.link-list__item').at(0);
         homeMenuItem.simulate('click')
         wrapper.update()
         expect(RouteTo.mock.calls.length).toBe(1);
     })
 
     it('Music menu link reports a click',() => {
-        const musicMenuItem = wrapper.find('.link-list-container-item').at(1);
+        const musicMenuItem = wrapper.find('.link-list__item').at(1);
         musicMenuItem.simulate('click')
         wrapper.update()
 
