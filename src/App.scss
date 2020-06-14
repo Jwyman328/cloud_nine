@@ -1,7 +1,5 @@
-$main-pink: #E206A4;
-$light-pink:#CD4E81;
-$main-purple:#68427F;
-$light-blue:#999FCF;
+@import "../src/sass/colors";
+
 
 .App {
   display: flex;
