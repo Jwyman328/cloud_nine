@@ -7,11 +7,11 @@ type NewFeedItemData = {
 
 function NewsFeedItem({ text, image }: NewFeedItemData) {
   return (
-    <div className="newsFeed-item">
-      <div className="newsFeed-item-content">
-        <div className="newsFeed-item-content-text">{text}</div>
+    <div className="newsFeed__item">
+      <div className="newsFeed__content">
+        <div className="newsFeed__text">{text}</div>
       </div>
-      <img className="newsFeed-item-image" src={image} />
+      <img className="newsFeed__image" src={image} />
     </div>
   );
 }

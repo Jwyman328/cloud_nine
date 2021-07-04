@@ -1,7 +1,4 @@
-$main-pink: #e206a4;
-$light-pink: #cd4e81;
-$main-purple: #68427f;
-$light-blue: #999fcf;
+@import "./colors";
 
 .AlbumPage {
   width: 100vw;
@@ -31,13 +28,13 @@ $light-blue: #999fcf;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-/*   border-left-width: 20px;
+  /*   border-left-width: 20px;
   border-left-style: solid;
   border-right-width: 20px;
   border-right-style: solid;
   border-color: rgba(255, 255, 255, 0.317);;
  */
-  &-item {
+  &__item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -52,45 +49,41 @@ $light-blue: #999fcf;
     max-width: 700px;
     min-height: 150px;
     height: auto;
-    
+
     border-radius: 50px;
     z-index: 0;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 
     margin-top: 3vh;
-    
+  }
+  &__image {
+    position: relative;
+    width: 50%;
+    //object-fit: cover;
+    height: 100%;
+    border-radius: 50px;
+    z-index: 1;
+  }
 
-    &-image {
-      position: relative;
-      width: 50%;
-      //object-fit: cover;
-      height: 100%;
-      border-radius: 50px;
-      z-index: 1;
-    }
+  &__content {
+    width: 50%;
+    height: 100%;
+    border-radius: 50px;
+    //background-color: blue;
 
-    &-content {
-      width: 50%;
-      height: 100%;
-      border-radius: 50px;
-      //background-color: blue;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      &-text {
-        width: 70%;
-        height: auto;
-        //background-color: yellow;
-        font-size: x-large;
-        text-align: center;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    width: 70%;
+    height: auto;
+    //background-color: yellow;
+    font-size: x-large;
+    text-align: center;
   }
 }
-
 
 .ComingSoonImage {
   width: 50vw;

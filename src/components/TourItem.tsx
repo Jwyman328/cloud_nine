@@ -8,11 +8,11 @@ type TourDateInformation = {
 } 
 function TourItem({date,time,location,venue}:TourDateInformation) {
   return (
-    <div className="tour-chart-item">
-      <div className="tour-chart-item-element" >{date}</div>
-      <div className="tour-chart-item-element">{time}</div>
-      <div className="tour-chart-item-element">{location}</div>
-      <div className="tour-chart-item-element">{venue}</div>
+    <div className="tour-chart__event">
+      <div className="tour-chart__data" >{date}</div>
+      <div className="tour-chart__data">{time}</div>
+      <div className="tour-chart__data">{location}</div>
+      <div className="tour-chart__data">{venue}</div>
     </div>
   );
 }

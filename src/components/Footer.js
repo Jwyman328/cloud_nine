@@ -12,7 +12,7 @@ import menuModalState from "../context/menuModalState";
 function Footer(props) {
   return (
     <div  className={"footer"}>
-      <div className="footer-social-media">
+      <div className="footer__social-media">
         <FooterItem
           logo={youtubeLogo}
           link="https://www.youtube.com/channel/UCt2dQJzOhBnxb_nrwmd2Nzw/featured"

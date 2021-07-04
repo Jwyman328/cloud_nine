@@ -36,7 +36,7 @@ function HomePage() {
         <div className="mobileBackground"> </div>
       )}
 
-      <div className="link-list-container">
+      <div className="link-list">
         <MenuItem title="Home" route="/" />
         <a className="menu_item_link" href={spotifyLink} target="_blank">
           <MenuItem title="Music" />
