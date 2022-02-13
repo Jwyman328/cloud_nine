@@ -8,6 +8,8 @@ type SetApiData = Function;
 function useFetchAndSetAPIData<ApiDataType>(apiUrl:string): ApiDataType {
   const [apiData, setApiData] = useState<any>([]);
 
+  //"http://127.0.0.1:8000/latest_news_items/" for dev
+
   useEffect(() => {
     const fetchAndSetApiData = async () => {
       const apiRawData = await fetch(apiUrl);
